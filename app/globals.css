@@ -1,0 +1,47 @@
+@import "katex/dist/katex.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 58% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 42% 10%;
+    --card-foreground: 210 40% 98%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 190 100% 50%;
+    --primary: 190 100% 50%;
+    --primary-foreground: 222 84% 5%;
+    --secondary: 263 68% 55%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 263 68% 55%;
+    --accent-foreground: 210 40% 98%;
+    --muted: 220 23% 16%;
+    --muted-foreground: 215 20% 72%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top, rgba(124, 58, 237, 0.18), transparent 40%),
+      radial-gradient(circle at right, rgba(0, 212, 255, 0.16), transparent 28%),
+      linear-gradient(180deg, #030712 0%, #07111f 100%);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+  }
+}
